@@ -45,7 +45,6 @@ function Game() {
     const newSquares = squares.slice();
 
     if (calculateWinner(newSquares) || newSquares[i]) {
-      // handlRestart();
       return;
     }
 
