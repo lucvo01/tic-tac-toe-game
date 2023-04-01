@@ -44,9 +44,10 @@ function Game() {
   const handleClick = (i) => {
     const newSquares = squares.slice();
 
-    // if (calculateWinner(newSquares) || newSquares[i]) {
-    //   return;
-    // }
+    if (calculateWinner(newSquares) || newSquares[i]) {
+      handlRestart();
+      return;
+    }
 
     newSquares[i] = xIsNext ? "X" : "O";
     setSquares(newSquares);
